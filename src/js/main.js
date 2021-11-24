@@ -1,6 +1,8 @@
 var slideIndex = 1;
 showSlides(slideIndex);
 
+var stars;
+
 // Next/previous controls
 function plusSlides(n) {
   showSlides((slideIndex += n));
@@ -23,6 +25,202 @@ function showSlides(n) {
     "2000s",
     "2010s",
   ];
+  var decades = ["60", "70", "80", "90", "00", "10"];
+  var json = {
+    players: [
+      {
+        name: "Wilt Chamberlain",
+        bio: "Wilt was a beast.",
+        years: "1959-1972",
+        decade: "60",
+        PPG: "30.1",
+        RPG: "22.9",
+        APG: "4.4",
+        FF: "Fun fact about Wilt is that he is good at basketball",
+      },
+      {
+        name: "Bill Russell",
+        bio: "Wilt was a beast.",
+        years: "1959-1972",
+        decade: "60",
+        PPG: "15.1",
+        RPG: "22.5",
+        APG: "4.3",
+        FF: "Fun fact about Wilt is that he is good at basketball",
+      },
+      {
+        name: "Oscar Robertson",
+        bio: "Wilt was a beast.",
+        years: "1959-1972",
+        decade: "60",
+        PPG: "25.7",
+        RPG: "7.5",
+        APG: "9.5",
+        FF: "Fun fact about Wilt is that he is good at basketball",
+      },
+      {
+        name: "Julius Erving",
+        bio: "Wilt was a beast.",
+        years: "1959-1972",
+        decade: "70",
+        PPG: "24.2",
+        RPG: "8.5",
+        APG: "4.2",
+        FF: "Fun fact about Wilt is that he is good at basketball",
+      },
+      {
+        name: "Kareem Abdul-Jabbar",
+        bio: "Wilt was a beast.",
+        years: "1959-1972",
+        decade: "70",
+        PPG: "24.6",
+        RPG: "11.2",
+        APG: "3.6",
+        FF: "Fun fact about Wilt is that he is good at basketball",
+      },
+      {
+        name: "Jerry West",
+        bio: "Wilt was a beast.",
+        years: "1959-1972",
+        decade: "70",
+        PPG: "27.0",
+        RPG: "5.8",
+        APG: "6.7",
+        FF: "Fun fact about Wilt is that he is good at basketball",
+      },
+      {
+        name: "Magic Johnson",
+        bio: "Wilt was a beast.",
+        years: "1959-1972",
+        decade: "80",
+        PPG: "19.5",
+        RPG: "7.2",
+        APG: "11.2",
+        FF: "Fun fact about Wilt is that he is good at basketball",
+      },
+      {
+        name: "Larry Bird",
+        bio: "Wilt was a beast.",
+        years: "1959-1972",
+        decade: "80",
+        PPG: "24.3",
+        RPG: "10.0",
+        APG: "6.3",
+        FF: "Fun fact about Wilt is that he is good at basketball",
+      },
+      {
+        name: "Michael Jordan",
+        bio: "Wilt was a beast.",
+        years: "1959-1972",
+        decade: "80",
+        PPG: "30.1",
+        RPG: "6.2",
+        APG: "5.3",
+        FF: "Fun fact about Wilt is that he is good at basketball",
+      },
+      {
+        name: "Michael Jordan",
+        bio: "Wilt was a beast.",
+        years: "1959-1972",
+        decade: "90",
+        PPG: "30.1",
+        RPG: "6.2",
+        APG: "5.3",
+        FF: "Fun fact about Wilt is that he is good at basketball",
+      },
+      {
+        name: "Hakeem Olajuwon",
+        bio: "Wilt was a beast.",
+        years: "1959-1972",
+        decade: "90",
+        PPG: "21.8",
+        RPG: "11.1",
+        APG: "2.5",
+        FF: "Fun fact about Wilt is that he is good at basketball",
+      },
+      {
+        name: "Karl Malone",
+        bio: "Wilt was a beast.",
+        years: "1959-1972",
+        decade: "90",
+        PPG: "25.0",
+        RPG: "10.1",
+        APG: "3.6",
+        FF: "Fun fact about Wilt is that he is good at basketball",
+      },
+      {
+        name: "Kobe Bryant",
+        bio: "Wilt was a beast.",
+        years: "1959-1972",
+        decade: "00",
+        PPG: "25.0",
+        RPG: "5.2",
+        APG: "4.7",
+        FF: "Fun fact about Wilt is that he is good at basketball",
+      },
+      {
+        name: "Tim Duncan",
+        bio: "Wilt was a beast.",
+        years: "1959-1972",
+        decade: "00",
+        PPG: "19.0",
+        RPG: "10.8",
+        APG: "3.0",
+        FF: "Fun fact about Wilt is that he is good at basketball",
+      },
+      {
+        name: "Shaquille O'Neal",
+        bio: "Wilt was a beast.",
+        years: "1959-1972",
+        decade: "00",
+        PPG: "23.7",
+        RPG: "10.9",
+        APG: "2.5",
+        FF: "Fun fact about Wilt is that he is good at basketball",
+      },
+      {
+        name: "LeBron James",
+        bio: "Wilt was a beast.",
+        years: "1959-1972",
+        decade: "10",
+        PPG: "27.0",
+        RPG: "7.4",
+        APG: "7.4",
+        FF: "Fun fact about Wilt is that he is good at basketball",
+      },
+      {
+        name: "Steph Curry",
+        bio: "Wilt was a beast.",
+        years: "1959-1972",
+        decade: "10",
+        PPG: "24.3",
+        RPG: "4.6",
+        APG: "6.5",
+        FF: "Fun fact about Wilt is that he is good at basketball",
+      },
+      {
+        name: "Kevin Durant",
+        bio: "Wilt was a beast.",
+        years: "1959-1972",
+        decade: "10",
+        PPG: "27.0",
+        RPG: "7.1",
+        APG: "4.2",
+        FF: "Fun fact about Wilt is that he is good at basketball",
+      },
+    ],
+  };
+
+  /*
+  function dec(json) {
+    const star1 = json.filter((obj) => (obj.decade = "80"));
+    console.log(star1);
+    return star1;
+  }
+  var first = dec(json);
+  console.log(first);
+  */
+
   var desc = document.getElementById("desc");
 
   if (n > slides.length) {
@@ -37,6 +235,42 @@ function showSlides(n) {
   for (i = 0; i < dots.length; i++) {
     dots[i].className = dots[i].className.replace(" active", "");
   }
+  var j = 0;
+  for (let i = 0; i < json.players.length; i++) {
+    //LOOP THROUGH ALL THE PLAYERS IN THE LIST
+    if (json.players[i].decade == decades[slideIndex - 1]) {
+      //GET THE ONES THAT MATCH THE DECADE BEING DISPLAYED
+      j++;
+      stars = json.players[i];
+      console.log(stars.name);
+      //DETERMINE WHICH CARD PLAYER IS DISPLAYED ON BASED ON HOW MANY
+      //STARS HAVE ALREADY BEEN DISPLAYED (THERE WILL ALWAYS BE 3 FOR EACH DECADE)
+      if (j === 1) {
+        document.getElementById("1T").innerHTML = stars.name;
+        document.getElementById("1P").innerHTML = "PPG: " + stars.PPG;
+        document.getElementById("1R").innerHTML = "RPG: " + stars.RPG;
+        document.getElementById("1A").innerHTML = "APG: " + stars.APG;
+      }
+      if (j === 2) {
+        document.getElementById("2T").innerHTML = stars.name;
+        document.getElementById("2P").innerHTML = "PPG: " + stars.PPG;
+        document.getElementById("2R").innerHTML = "RPG: " + stars.RPG;
+        document.getElementById("2A").innerHTML = "APG: " + stars.APG;
+      }
+
+      if (j === 3) {
+        document.getElementById("3T").innerHTML = stars.name;
+        document.getElementById("3P").innerHTML = "PPG: " + stars.PPG;
+        document.getElementById("3R").innerHTML = "RPG: " + stars.RPG;
+        document.getElementById("3A").innerHTML = "APG: " + stars.APG;
+      }
+      /*
+      
+      */
+    }
+  }
+  console.log(stars + "after");
+
   desc.innerHTML = descriptions[slideIndex - 1];
   slides[slideIndex - 1].style.display = "block";
   dots[slideIndex - 1].className += " active";
@@ -57,6 +291,7 @@ var Eighties = document.getElementById("80");
 var Nineties = document.getElementById("90");
 var Zeros = document.getElementById("00");
 var Tens = document.getElementById("10");
+//var card1 = document.getElementById("card1");
 
 //Define what you want to happen
 function changeW() {
@@ -137,3 +372,4 @@ Zeros.addEventListener("mouseover", changeK);
 Zeros.addEventListener("mouseout", backK);
 Tens.addEventListener("mouseover", changeB);
 Tens.addEventListener("mouseout", backB);
+//card1.addEventListener("click", reveal1);
