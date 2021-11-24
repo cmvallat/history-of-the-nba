@@ -1,0 +1,94 @@
+{
+  "players": [
+    {
+      "name": "Wilt Chamberlain",
+      "bio": "Wilt was a beast.",
+      "years": "1959-1972",
+      "decade": "60",
+      "PPG": "30.0",
+      "RPG": "24.0",
+      "APG": "8.0",
+      "FF": "Fun fact about Wilt is that he is good at basketball"
+    },
+    {
+      "name": "Bill Russell",
+      "bio": "Wilt was a beast.",
+      "years": "1959-1972",
+      "decade": "60",
+      "PPG": "30.0",
+      "RPG": "24.0",
+      "APG": "8.0",
+      "FF": "Fun fact about Wilt is that he is good at basketball"
+    },
+    {
+      "name": "Oscar Robertson",
+      "bio": "Wilt was a beast.",
+      "years": "1959-1972",
+      "decade": "60",
+      "PPG": "30.0",
+      "RPG": "24.0",
+      "APG": "8.0",
+      "FF": "Fun fact about Wilt is that he is good at basketball"
+    },
+    {
+      "name": "Julius Erving",
+      "bio": "Wilt was a beast.",
+      "years": "1959-1972",
+      "decade": "70",
+      "PPG": "30.0",
+      "RPG": "24.0",
+      "APG": "8.0",
+      "FF": "Fun fact about Wilt is that he is good at basketball"
+    },
+    {
+      "name": "Kareem Abdul-Jabbar",
+      "bio": "Wilt was a beast.",
+      "years": "1959-1972",
+      "decade": "70",
+      "PPG": "30.0",
+      "RPG": "24.0",
+      "APG": "8.0",
+      "FF": "Fun fact about Wilt is that he is good at basketball"
+    },
+    {
+      "name": "Jerry West",
+      "bio": "Wilt was a beast.",
+      "years": "1959-1972",
+      "decade": "70",
+      "PPG": "30.0",
+      "RPG": "24.0",
+      "APG": "8.0",
+      "FF": "Fun fact about Wilt is that he is good at basketball"
+    },
+    {
+      "name": "Magic Johnson",
+      "bio": "Wilt was a beast.",
+      "years": "1959-1972",
+      "decade": "80",
+      "PPG": "30.0",
+      "RPG": "24.0",
+      "APG": "8.0",
+      "FF": "Fun fact about Wilt is that he is good at basketball"
+    },
+    {
+      "name": "Larry Bird",
+      "bio": "Wilt was a beast.",
+      "years": "1959-1972",
+      "decade": "80",
+      "PPG": "30.0",
+      "RPG": "24.0",
+      "APG": "8.0",
+      "FF": "Fun fact about Wilt is that he is good at basketball"
+    },
+    {
+      "name": "Michael Jordan",
+      "bio": "Wilt was a beast.",
+      "years": "1959-1972",
+      "decade": "80",
+      "PPG": "30.0",
+      "RPG": "24.0",
+      "APG": "8.0",
+      "FF": "Fun fact about Wilt is that he is good at basketball"
+    }
+  ]
+}
