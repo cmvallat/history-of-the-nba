@@ -10,8 +10,63 @@
     <title>History of the NBA</title>
   </head>
   <body>
+    <!-- Slideshow container -->
+    <div class="slideshow-container">
+      <!-- Full-width images with number and caption text -->
+
+      <div class="mySlides fade" id="60">
+        <div class="numbertext">1/6</div>
+        <img id="wilt" src="./images/60s.jpeg" style="width: 100%" />
+        <div class="text">The 1960s</div>
+      </div>
+
+      <div class="mySlides fade" id="70">
+        <div class="numbertext">2/6</div>
+        <img id="DrJ" src="./images/70s.jpg" style="width: 100%" />
+        <div class="text">The 1970s</div>
+      </div>
+
+      <div class="mySlides fade" id="80">
+        <div class="numbertext">3/6</div>
+        <img id="magic" src="./images/80s.jpg" style="width: 100%" />
+        <div class="text">The 1980s</div>
+      </div>
+
+      <div class="mySlides fade" id="90">
+        <div class="numbertext">4/6</div>
+        <img id="MJ" src="./images/90s.jpg" style="width: 100%" />
+        <div class="text">The 1990s</div>
+      </div>
+
+      <div class="mySlides fade" id="00">
+        <div class="numbertext">5/6</div>
+        <img id="kobe" src="./images/00s.jpg" style="width: 100%" />
+        <div class="text">The 2000s</div>
+      </div>
+
+      <div class="mySlides fade" id="10">
+        <div class="numbertext">6/6</div>
+        <img id="bron" src="./images/10s.jpg" style="width: 100%" />
+        <div class="text">The 2010s</div>
+      </div>
+
+      <!-- Next and previous buttons -->
+      <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+      <a class="next" onclick="plusSlides(1)">&#10095;</a>
+    </div>
+    <br />
+
     <div>
-      <h1>History of the NBA</h1>
+      <p id="desc"></p>
+    </div>
+    <!-- The dots/circles -->
+    <div style="text-align: center">
+      <span class="dot" onclick="currentSlide(1)"></span>
+      <span class="dot" onclick="currentSlide(2)"></span>
+      <span class="dot" onclick="currentSlide(3)"></span>
+      <span class="dot" onclick="currentSlide(4)"></span>
+      <span class="dot" onclick="currentSlide(5)"></span>
+      <span class="dot" onclick="currentSlide(6)"></span>
     </div>
   </body>
 </html>
