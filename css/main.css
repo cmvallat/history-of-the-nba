@@ -16,13 +16,20 @@ body {
 .slideshow-container,
 #desc,
 #floor,
-.big-card {
+.big-card,
+#intro {
   max-width: 62.5rem;
   position: relative;
   margin: auto;
 }
 
-#desc {
+#intro {
+  background: url("../images/floor.jpg");
+  margin-bottom: 2rem;
+}
+
+#desc,
+#intro > p {
   color: black;
   font-size: 1.5rem;
   font-family: Georgia, "Times New Roman", Times, serif;
@@ -30,6 +37,7 @@ body {
   padding: 2rem;
   margin-bottom: 1rem;
 }
+
 #floor {
   background: url("../images/floor.jpg");
 }
