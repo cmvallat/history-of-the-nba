@@ -250,9 +250,7 @@ function showSlides(n) {
         document.getElementById("1P").innerHTML = "PPG: " + stars.PPG;
         document.getElementById("1R").innerHTML = "RPG: " + stars.RPG;
         document.getElementById("1A").innerHTML = "APG: " + stars.APG;
-        document.getElementById(
-          "card1-img"
-        ).src = `../images/${stars.name}.jpg`;
+        document.getElementById("card1-img").src = `./images/${stars.name}.jpg`;
         console.log(document.getElementById("card1-img").src);
       }
       if (j === 2) {
@@ -260,9 +258,7 @@ function showSlides(n) {
         document.getElementById("2P").innerHTML = "PPG: " + stars.PPG;
         document.getElementById("2R").innerHTML = "RPG: " + stars.RPG;
         document.getElementById("2A").innerHTML = "APG: " + stars.APG;
-        document.getElementById(
-          "card2-img"
-        ).src = `../images/${stars.name}.jpg`;
+        document.getElementById("card2-img").src = `./images/${stars.name}.jpg`;
       }
 
       if (j === 3) {
@@ -270,9 +266,7 @@ function showSlides(n) {
         document.getElementById("3P").innerHTML = "PPG: " + stars.PPG;
         document.getElementById("3R").innerHTML = "RPG: " + stars.RPG;
         document.getElementById("3A").innerHTML = "APG: " + stars.APG;
-        document.getElementById(
-          "card3-img"
-        ).src = `../images/${stars.name}.jpg`;
+        document.getElementById("card3-img").src = `./images/${stars.name}.jpg`;
       }
       /*
       
