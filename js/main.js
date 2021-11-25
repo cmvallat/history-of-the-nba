@@ -18,12 +18,12 @@ function showSlides(n) {
   var slides = document.getElementsByClassName("mySlides");
   var dots = document.getElementsByClassName("dot");
   var descriptions = [
-    "The 1960s were an era defined by the rivalry between Bill Russell's Celtics and Wilt Chamberlain's Warriors and 76ers. While Wilt put up big numbers, Russell's Celtics won 9 out of the 10 championships of the decade, creating one of the greatest dynasties in NBA history and American sports. At this point in NBA history, there were few black players, so the quality of competition was lower, and resulted in a few teams like Russell's Celtics dominating inferior players.",
-    "1970s",
-    "1980s",
-    "1990s",
-    "2000s",
-    "2010s",
+    "The 1960s were an era defined by the rivalry between Bill Russell's Celtics and Wilt Chamberlain's Warriors and 76ers. While Wilt put up big numbers, Russell's Celtics won 9 out of the 10 championships of the decade, creating one of the greatest dynasties in NBA history and American sports. At this point in NBA history, there were few black players, but that number would soon grow towards the end of the decade. Also, in 1967, the American Basketball Association, or ABA, emerged as competition to the NBA.",
+    "NBA Basketball in the 1970s saw the NBA's absorption of the ABA, leading to an increase in teams, players and fans, and helped grow the NBA into the global conglomerate it is today. The New York Knicks were one of the main teams in this era, featuring stars such as Walt Frazier, Earl Monroe, Willis Reed, and David DeBusschere.",
+    "Like the 1960s, the 1980s were also defined by a rivalry, this time between Larry Bird and his Celtics and Magic Johnson's Lakers. The Lakers and Celtics combined to win 8 out of the 10 championships of the decade, and Bird and Johson won 5 combined MVPs. The mid and late 1980s also saw the emergence of Michael Jordan and the Chicago Bulls, who battled it out with the Bad Boy Pistons in the Eastern Conference.",
+    "The 1990s were the age of Michael Jordan, who won back-to-back-to-back championships twice in an 8 year span. Jordan's popularity helped the NBA become a truly global sport, along with the leadership of commissioner David Stern.",
+    "The beginning of the 2000s in the NBA saw the dynamic duo of Kobe Bryant and Shaquille O'Neal, who teamed up to three-peat from '99-'01. Tim Duncan's San Antonio Spurs were also a dynasty, winning the championship in '03, '05 and '07. The 00s saw the rise of baggy shorts and was exemplified in spirit by Allen Iverson, who influenced NBA culture with his attitude and style greatly.",
+    "Like Jordan in the 90s, the 2010s were dominated by LeBron James, who appeared in 8 straight finals from 2011-2018, winning 3. Also noted was the emergence of Steph Curry, who became a cultural phenomenon for his shooting abilities. Off the court, the 2010s have been defined by fighting for social justice from the players, including the firing of Clippers owner David Sterling for racist remarks, and protests against police brutality.",
   ];
   var decades = ["60", "70", "80", "90", "00", "10"];
   var json = {
@@ -306,67 +306,44 @@ var Tens = document.getElementById("10");
 //Define what you want to happen
 function changeW() {
   W.src = "./images/wilt.gif";
-  console.log("change");
 }
 function backW() {
   W.src = "./images/60s.jpeg";
-  console.log("back");
-  document.body.style.cursor = "auto";
 }
 
 function changeJ() {
   J.src = "./images/DrJ.gif";
-  console.log("change");
-  document.body.style.cursor = url("./images/basketball.png");
 }
 function backJ() {
   J.src = "./images/70s.jpg";
-  console.log("back");
-  document.body.style.cursor = "auto";
 }
 
 function changeM() {
   M.src = "./images/magic.gif";
-  console.log("change");
-  document.body.style.cursor = url("./images/basketball.png");
 }
 function backM() {
   M.src = "./images/80s.jpg";
-  console.log("back");
-  document.body.style.cursor = "auto";
 }
 
 function changeMJ() {
   MJ.src = "./images/mj.gif";
-  console.log("change");
-  document.body.style.cursor = url("./images/basketball.png");
 }
 function backMJ() {
   MJ.src = "./images/90s.jpg";
-  console.log("back");
-  document.body.style.cursor = "auto";
 }
 
 function changeK() {
   K.src = "./images/kobe.gif";
-  console.log("change");
-  document.body.style.cursor = url("./images/basketball.png");
 }
 function backK() {
   K.src = "./images/00s.jpg";
-  console.log("back");
-  document.body.style.cursor = "auto";
 }
 
 function changeB() {
   B.src = "./images/bron.gif";
-  console.log("change");
-  document.body.style.cursor = url("./images/basketball.png");
 }
 function backB() {
   B.src = "./images/10s.jpg";
-  console.log("back");
-  document.body.style.cursor = "auto";
 }
 
 //Wire it up
@@ -383,3 +360,13 @@ Zeros.addEventListener("mouseout", backK);
 Tens.addEventListener("mouseover", changeB);
 Tens.addEventListener("mouseout", backB);
 //card1.addEventListener("click", reveal1);
+
+let button = document.getElementById("sources");
+let aside = document.getElementById("modal");
+
+function toggleModal() {
+  aside.classList.toggle("active");
+}
+
+button.addEventListener("click", toggleModal);
+aside.addEventListener("click", toggleModal);
