@@ -12,7 +12,7 @@ body {
   box-sizing: border-box;
 }
 
-/* Slideshow container */
+/*Center everything*/
 .slideshow-container,
 #desc,
 #floor,
@@ -38,10 +38,26 @@ body {
   margin-bottom: 1rem;
 }
 
+#intro > h1 {
+  color: var(--nba-blue);
+  font-size: 2rem;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  width: 100%;
+  padding-left: 2rem;
+  padding-top: 1rem;
+  text-align: center;
+  text-decoration: underline 0.3rem;
+}
+
 #floor {
   background: url("../images/floor.jpg");
 }
 
+figure img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
 /* Hide the images by default */
 .mySlides {
   display: none;
