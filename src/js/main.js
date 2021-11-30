@@ -2,6 +2,191 @@ var slideIndex = 1;
 showSlides(slideIndex);
 
 var stars;
+var decades = ["60", "70", "80", "90", "00", "10"];
+var json = {
+  players: [
+    {
+      name: "Wilt Chamberlain",
+      bio: "Wilt was a beast.",
+      years: "1959-1972",
+      decade: "60",
+      PPG: "30.1",
+      RPG: "22.9",
+      APG: "4.4",
+      FF: "Fun fact about Wilt is that he is good at basketball",
+    },
+    {
+      name: "Bill Russell",
+      bio: "Wilt was a beast.",
+      years: "1959-1972",
+      decade: "60",
+      PPG: "15.1",
+      RPG: "22.5",
+      APG: "4.3",
+      FF: "Fun fact about Wilt is that he is good at basketball",
+    },
+    {
+      name: "Oscar Robertson",
+      bio: "Wilt was a beast.",
+      years: "1959-1972",
+      decade: "60",
+      PPG: "25.7",
+      RPG: "7.5",
+      APG: "9.5",
+      FF: "Fun fact about Wilt is that he is good at basketball",
+    },
+    {
+      name: "Julius Erving",
+      bio: "Wilt was a beast.",
+      years: "1959-1972",
+      decade: "70",
+      PPG: "24.2",
+      RPG: "8.5",
+      APG: "4.2",
+      FF: "Fun fact about Wilt is that he is good at basketball",
+    },
+    {
+      name: "Kareem Abdul-Jabbar",
+      bio: "Wilt was a beast.",
+      years: "1959-1972",
+      decade: "70",
+      PPG: "24.6",
+      RPG: "11.2",
+      APG: "3.6",
+      FF: "Fun fact about Wilt is that he is good at basketball",
+    },
+    {
+      name: "Jerry West",
+      bio: "Wilt was a beast.",
+      years: "1959-1972",
+      decade: "70",
+      PPG: "27.0",
+      RPG: "5.8",
+      APG: "6.7",
+      FF: "Fun fact about Wilt is that he is good at basketball",
+    },
+    {
+      name: "Magic Johnson",
+      bio: "Wilt was a beast.",
+      years: "1959-1972",
+      decade: "80",
+      PPG: "19.5",
+      RPG: "7.2",
+      APG: "11.2",
+      FF: "Fun fact about Wilt is that he is good at basketball",
+    },
+    {
+      name: "Larry Bird",
+      bio: "Wilt was a beast.",
+      years: "1959-1972",
+      decade: "80",
+      PPG: "24.3",
+      RPG: "10.0",
+      APG: "6.3",
+      FF: "Fun fact about Wilt is that he is good at basketball",
+    },
+    {
+      name: "Michael Jordan",
+      bio: "Wilt was a beast.",
+      years: "1959-1972",
+      decade: "80",
+      PPG: "30.1",
+      RPG: "6.2",
+      APG: "5.3",
+      FF: "Fun fact about Wilt is that he is good at basketball",
+    },
+    {
+      name: "Michael Jordan",
+      bio: "Wilt was a beast.",
+      years: "1959-1972",
+      decade: "90",
+      PPG: "30.1",
+      RPG: "6.2",
+      APG: "5.3",
+      FF: "Fun fact about Wilt is that he is good at basketball",
+    },
+    {
+      name: "Hakeem Olajuwon",
+      bio: "Wilt was a beast.",
+      years: "1959-1972",
+      decade: "90",
+      PPG: "21.8",
+      RPG: "11.1",
+      APG: "2.5",
+      FF: "Fun fact about Wilt is that he is good at basketball",
+    },
+    {
+      name: "Karl Malone",
+      bio: "Wilt was a beast.",
+      years: "1959-1972",
+      decade: "90",
+      PPG: "25.0",
+      RPG: "10.1",
+      APG: "3.6",
+      FF: "Fun fact about Wilt is that he is good at basketball",
+    },
+    {
+      name: "Kobe Bryant",
+      bio: "Wilt was a beast.",
+      years: "1959-1972",
+      decade: "00",
+      PPG: "25.0",
+      RPG: "5.2",
+      APG: "4.7",
+      FF: "Fun fact about Wilt is that he is good at basketball",
+    },
+    {
+      name: "Tim Duncan",
+      bio: "Wilt was a beast.",
+      years: "1959-1972",
+      decade: "00",
+      PPG: "19.0",
+      RPG: "10.8",
+      APG: "3.0",
+      FF: "Fun fact about Wilt is that he is good at basketball",
+    },
+    {
+      name: "Shaquille O'Neal",
+      bio: "Wilt was a beast.",
+      years: "1959-1972",
+      decade: "00",
+      PPG: "23.7",
+      RPG: "10.9",
+      APG: "2.5",
+      FF: "Fun fact about Wilt is that he is good at basketball",
+    },
+    {
+      name: "LeBron James",
+      bio: "Wilt was a beast.",
+      years: "1959-1972",
+      decade: "10",
+      PPG: "27.0",
+      RPG: "7.4",
+      APG: "7.4",
+      FF: "Fun fact about Wilt is that he is good at basketball",
+    },
+    {
+      name: "Steph Curry",
+      bio: "Wilt was a beast.",
+      years: "1959-1972",
+      decade: "10",
+      PPG: "24.3",
+      RPG: "4.6",
+      APG: "6.5",
+      FF: "Fun fact about Wilt is that he is good at basketball",
+    },
+    {
+      name: "Kevin Durant",
+      bio: "Wilt was a beast.",
+      years: "1959-1972",
+      decade: "10",
+      PPG: "27.0",
+      RPG: "7.1",
+      APG: "4.2",
+      FF: "Fun fact about Wilt is that he is good at basketball",
+    },
+  ],
+};
 
 // Next/previous controls
 function plusSlides(n) {
@@ -25,191 +210,6 @@ function showSlides(n) {
     "The beginning of the 2000s in the NBA saw the dynamic duo of Kobe Bryant and Shaquille O'Neal, who teamed up to three-peat from '99-'01. Tim Duncan's San Antonio Spurs were also a dynasty, winning the championship in '03, '05 and '07. The 00s saw the rise of baggy shorts and was exemplified in spirit by Allen Iverson, who influenced NBA culture with his attitude and style greatly.",
     "Like Jordan in the 90s, the 2010s were dominated by LeBron James, who appeared in 8 straight finals from 2011-2018, winning 3. Also noted was the emergence of Steph Curry, who became a cultural phenomenon for his shooting abilities. Off the court, the 2010s have been defined by fighting for social justice from the players, including the firing of Clippers owner David Sterling for racist remarks, and protests against police brutality.",
   ];
-  var decades = ["60", "70", "80", "90", "00", "10"];
-  var json = {
-    players: [
-      {
-        name: "Wilt Chamberlain",
-        bio: "Wilt was a beast.",
-        years: "1959-1972",
-        decade: "60",
-        PPG: "30.1",
-        RPG: "22.9",
-        APG: "4.4",
-        FF: "Fun fact about Wilt is that he is good at basketball",
-      },
-      {
-        name: "Bill Russell",
-        bio: "Wilt was a beast.",
-        years: "1959-1972",
-        decade: "60",
-        PPG: "15.1",
-        RPG: "22.5",
-        APG: "4.3",
-        FF: "Fun fact about Wilt is that he is good at basketball",
-      },
-      {
-        name: "Oscar Robertson",
-        bio: "Wilt was a beast.",
-        years: "1959-1972",
-        decade: "60",
-        PPG: "25.7",
-        RPG: "7.5",
-        APG: "9.5",
-        FF: "Fun fact about Wilt is that he is good at basketball",
-      },
-      {
-        name: "Julius Erving",
-        bio: "Wilt was a beast.",
-        years: "1959-1972",
-        decade: "70",
-        PPG: "24.2",
-        RPG: "8.5",
-        APG: "4.2",
-        FF: "Fun fact about Wilt is that he is good at basketball",
-      },
-      {
-        name: "Kareem Abdul-Jabbar",
-        bio: "Wilt was a beast.",
-        years: "1959-1972",
-        decade: "70",
-        PPG: "24.6",
-        RPG: "11.2",
-        APG: "3.6",
-        FF: "Fun fact about Wilt is that he is good at basketball",
-      },
-      {
-        name: "Jerry West",
-        bio: "Wilt was a beast.",
-        years: "1959-1972",
-        decade: "70",
-        PPG: "27.0",
-        RPG: "5.8",
-        APG: "6.7",
-        FF: "Fun fact about Wilt is that he is good at basketball",
-      },
-      {
-        name: "Magic Johnson",
-        bio: "Wilt was a beast.",
-        years: "1959-1972",
-        decade: "80",
-        PPG: "19.5",
-        RPG: "7.2",
-        APG: "11.2",
-        FF: "Fun fact about Wilt is that he is good at basketball",
-      },
-      {
-        name: "Larry Bird",
-        bio: "Wilt was a beast.",
-        years: "1959-1972",
-        decade: "80",
-        PPG: "24.3",
-        RPG: "10.0",
-        APG: "6.3",
-        FF: "Fun fact about Wilt is that he is good at basketball",
-      },
-      {
-        name: "Michael Jordan",
-        bio: "Wilt was a beast.",
-        years: "1959-1972",
-        decade: "80",
-        PPG: "30.1",
-        RPG: "6.2",
-        APG: "5.3",
-        FF: "Fun fact about Wilt is that he is good at basketball",
-      },
-      {
-        name: "Michael Jordan",
-        bio: "Wilt was a beast.",
-        years: "1959-1972",
-        decade: "90",
-        PPG: "30.1",
-        RPG: "6.2",
-        APG: "5.3",
-        FF: "Fun fact about Wilt is that he is good at basketball",
-      },
-      {
-        name: "Hakeem Olajuwon",
-        bio: "Wilt was a beast.",
-        years: "1959-1972",
-        decade: "90",
-        PPG: "21.8",
-        RPG: "11.1",
-        APG: "2.5",
-        FF: "Fun fact about Wilt is that he is good at basketball",
-      },
-      {
-        name: "Karl Malone",
-        bio: "Wilt was a beast.",
-        years: "1959-1972",
-        decade: "90",
-        PPG: "25.0",
-        RPG: "10.1",
-        APG: "3.6",
-        FF: "Fun fact about Wilt is that he is good at basketball",
-      },
-      {
-        name: "Kobe Bryant",
-        bio: "Wilt was a beast.",
-        years: "1959-1972",
-        decade: "00",
-        PPG: "25.0",
-        RPG: "5.2",
-        APG: "4.7",
-        FF: "Fun fact about Wilt is that he is good at basketball",
-      },
-      {
-        name: "Tim Duncan",
-        bio: "Wilt was a beast.",
-        years: "1959-1972",
-        decade: "00",
-        PPG: "19.0",
-        RPG: "10.8",
-        APG: "3.0",
-        FF: "Fun fact about Wilt is that he is good at basketball",
-      },
-      {
-        name: "Shaquille O'Neal",
-        bio: "Wilt was a beast.",
-        years: "1959-1972",
-        decade: "00",
-        PPG: "23.7",
-        RPG: "10.9",
-        APG: "2.5",
-        FF: "Fun fact about Wilt is that he is good at basketball",
-      },
-      {
-        name: "LeBron James",
-        bio: "Wilt was a beast.",
-        years: "1959-1972",
-        decade: "10",
-        PPG: "27.0",
-        RPG: "7.4",
-        APG: "7.4",
-        FF: "Fun fact about Wilt is that he is good at basketball",
-      },
-      {
-        name: "Steph Curry",
-        bio: "Wilt was a beast.",
-        years: "1959-1972",
-        decade: "10",
-        PPG: "24.3",
-        RPG: "4.6",
-        APG: "6.5",
-        FF: "Fun fact about Wilt is that he is good at basketball",
-      },
-      {
-        name: "Kevin Durant",
-        bio: "Wilt was a beast.",
-        years: "1959-1972",
-        decade: "10",
-        PPG: "27.0",
-        RPG: "7.1",
-        APG: "4.2",
-        FF: "Fun fact about Wilt is that he is good at basketball",
-      },
-    ],
-  };
 
   /*
   function dec(json) {
@@ -235,49 +235,86 @@ function showSlides(n) {
   for (i = 0; i < dots.length; i++) {
     dots[i].className = dots[i].className.replace(" active", "");
   }
-  var j = 0;
-  for (let i = 0; i < json.players.length; i++) {
-    //LOOP THROUGH ALL THE PLAYERS IN THE LIST
-    if (json.players[i].decade == decades[slideIndex - 1]) {
-      //GET THE ONES THAT MATCH THE DECADE BEING DISPLAYED
-      j++;
-      stars = json.players[i];
-      console.log(stars.name);
-      //DETERMINE WHICH CARD PLAYER IS DISPLAYED ON BASED ON HOW MANY
-      //STARS HAVE ALREADY BEEN DISPLAYED (THERE WILL ALWAYS BE 3 FOR EACH DECADE)
-      if (j === 1) {
-        document.getElementById("1T").innerHTML = stars.name;
-        document.getElementById("1P").innerHTML = "PPG: " + stars.PPG;
-        document.getElementById("1R").innerHTML = "RPG: " + stars.RPG;
-        document.getElementById("1A").innerHTML = "APG: " + stars.APG;
-        document.getElementById("card1-img").src = `./images/${stars.name}.jpg`;
-        console.log(document.getElementById("card1-img").src);
-      }
-      if (j === 2) {
-        document.getElementById("2T").innerHTML = stars.name;
-        document.getElementById("2P").innerHTML = "PPG: " + stars.PPG;
-        document.getElementById("2R").innerHTML = "RPG: " + stars.RPG;
-        document.getElementById("2A").innerHTML = "APG: " + stars.APG;
-        document.getElementById("card2-img").src = `./images/${stars.name}.jpg`;
-      }
 
-      if (j === 3) {
-        document.getElementById("3T").innerHTML = stars.name;
-        document.getElementById("3P").innerHTML = "PPG: " + stars.PPG;
-        document.getElementById("3R").innerHTML = "RPG: " + stars.RPG;
-        document.getElementById("3A").innerHTML = "APG: " + stars.APG;
-        document.getElementById("card3-img").src = `./images/${stars.name}.jpg`;
-      }
-      /*
-      
-      */
-    }
-  }
   console.log(stars + "after");
 
   desc.innerHTML = descriptions[slideIndex - 1];
   slides[slideIndex - 1].style.display = "block";
   dots[slideIndex - 1].className += " active";
+
+  //Make sure the cards are reset to default EVERY TIME a new slideshow is clicked
+  document.getElementById("1T").innerHTML = "Player 1";
+  document.getElementById("1P").innerHTML = "PPG: ???";
+  document.getElementById("1R").innerHTML = "RPG: ???";
+  document.getElementById("1A").innerHTML = "APG: ???";
+  document.getElementById("card1-img").src = "./images/anon.png";
+
+  document.getElementById("2T").innerHTML = "Player 2";
+  document.getElementById("2P").innerHTML = "PPG: ???";
+  document.getElementById("2R").innerHTML = "RPG: ???";
+  document.getElementById("2A").innerHTML = "APG: ???";
+  document.getElementById("card2-img").src = "./images/anon.png";
+
+  document.getElementById("3T").innerHTML = "Player 3";
+  document.getElementById("3P").innerHTML = "PPG: ???";
+  document.getElementById("3R").innerHTML = "RPG: ???";
+  document.getElementById("3A").innerHTML = "APG: ???";
+  document.getElementById("card3-img").src = "./images/anon.png";
+
+  //Make it so the user can click on the card and see the superstars
+  var card = document.getElementsByClassName("article-card2");
+  var card_index;
+  for (let i = 0; i < card.length; i++) {
+    card[i].addEventListener("click", show);
+  }
+  var j = 0;
+
+  function show() {
+    console.log("SHOW");
+    for (let i = 0; i < json.players.length; i++) {
+      //LOOP THROUGH ALL THE PLAYERS IN THE LIST
+      if (json.players[i].decade == decades[slideIndex - 1]) {
+        //GET THE ONES THAT MATCH THE DECADE BEING DISPLAYED
+        j++;
+        stars = json.players[i];
+        console.log(stars.name);
+        //DETERMINE WHICH CARD PLAYER IS DISPLAYED ON BASED ON HOW MANY
+        //STARS HAVE ALREADY BEEN DISPLAYED (THERE WILL ALWAYS BE 3 FOR EACH DECADE)
+        if (j === 1) {
+          document.getElementById("1T").innerHTML = stars.name;
+          document.getElementById("1P").innerHTML = "PPG: " + stars.PPG;
+          document.getElementById("1R").innerHTML = "RPG: " + stars.RPG;
+          document.getElementById("1A").innerHTML = "APG: " + stars.APG;
+          document.getElementById(
+            "card1-img"
+          ).src = `./images/${stars.name}.jpg`;
+          console.log(document.getElementById("card1-img").src);
+        }
+        if (j === 2) {
+          document.getElementById("2T").innerHTML = stars.name;
+          document.getElementById("2P").innerHTML = "PPG: " + stars.PPG;
+          document.getElementById("2R").innerHTML = "RPG: " + stars.RPG;
+          document.getElementById("2A").innerHTML = "APG: " + stars.APG;
+          document.getElementById(
+            "card2-img"
+          ).src = `./images/${stars.name}.jpg`;
+        }
+
+        if (j === 3) {
+          document.getElementById("3T").innerHTML = stars.name;
+          document.getElementById("3P").innerHTML = "PPG: " + stars.PPG;
+          document.getElementById("3R").innerHTML = "RPG: " + stars.RPG;
+          document.getElementById("3A").innerHTML = "APG: " + stars.APG;
+          document.getElementById(
+            "card3-img"
+          ).src = `./images/${stars.name}.jpg`;
+        }
+        /*
+          
+          */
+      }
+    }
+  }
 }
 
 //To add gif on hover functionality
