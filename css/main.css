@@ -198,12 +198,10 @@ figure img {
   margin: 20px;
 }
 
-/*
 .article-card2:hover {
   cursor: url("../images/basketball1.png"), default;
-  flex-grow: 2;
+  /*flex-grow: 2;*/
 }
-*/
 
 .article-content {
   padding: 1rem 2rem 2rem 2rem;
